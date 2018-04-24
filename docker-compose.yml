@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  postgresdata:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=metro
+      - POSTGRES_PASSWORD=metro
+    ports:
+      - "5432:5432"
+    volumes:
+      - /opt/postgres/data:/var/lib/postgresql/data
