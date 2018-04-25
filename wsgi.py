@@ -4,7 +4,11 @@ from bs4 import BeautifulSoup
 import requests
 import psycopg2
 import os
+import re
+
 application = Flask(__name__)
+
+m = re.search('(?<=abc)def', 'abcdef')
 
 def connect_postgres():
     try:
